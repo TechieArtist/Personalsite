@@ -26,16 +26,7 @@ body {
     font-family: "Poppins", sans-serif;
   }
 
-  .home:before{
-    z-index: 10;
-    content: '';
-    position: absolute;
-    background: linear-gradient(to top, rgba(146, 221, 184, 0.068) 30%, rgba(0, 0, 0, 0.8));
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
+  
 
 
   header{
@@ -87,9 +78,22 @@ body {
   header .navigation .navigation-items a:hover:before{
     width: 100%;
   }
+  
 
   section{
     padding: 100px 200px;
+  }
+
+
+  .home:before{
+    z-index: 10;
+    content: '';
+    position: absolute;
+    background: linear-gradient(to top, rgba(146, 221, 184, 0.068) 30%, rgba(0, 0, 0, 0.8));
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
 
 .image-portrait {
@@ -120,7 +124,6 @@ body {
 .contact-info {
   padding: 50px 100px;
   text-align: center;
-
   background-color: rgba(0, 0, 0, 0.767); /* Set the background color to black */
   color: white; /* Set the text color to white for contrast */
   
@@ -255,4 +258,85 @@ body {
     z-index: -100; /* Ensure it stays in the background */
     background-size: cover; /* Cover the entire area */
   }
+  
+
+  @media (max-width: 1040px){
+    header{
+      padding: 12px 20px;
+    }
+  
+    section{
+      padding: 100px 20px;
+    }
+  
+    .home .media-icons{
+      right: 15px;
+    }
+  
+    header .navigation{
+      display: none;
+    }
+  
+    header .navigation.active{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(1, 1, 1, 0.5);
+    }
+  
+    header .navigation .navigation-items a{
+      color: #222;
+      font-size: 1.2em;
+      margin: 20px;
+    }
+  
+    header .navigation .navigation-items a:before{
+      background: #222;
+      height: 5px;
+    }
+  
+    header .navigation.active .navigation-items{
+      background: #fff;
+      width: 600px;
+      max-width: 600px;
+      margin: 20px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 5px;
+      box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+  
+    .menu-btn{
+      background: url(menu.png)no-repeat;
+      background-size: 30px;
+      background-position: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+  
+    .menu-btn.active{
+      z-index: 999;
+      background: url(close.png)no-repeat;
+      background-size: 25px;
+      background-position: center;
+      transition: 0.3s ease;
+    }
+  }
+  
+  @media (max-width: 560px){
+    .home .content h1{
+      font-size: 3em;
+      line-height: 60px;
+    }
+  }
+  
   
