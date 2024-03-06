@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <video class="video-slide" src="darktimes.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="darktimes.mp4"width="100%" height="auto" autoplay muted loop></video>
 
 
 <header>
@@ -23,6 +23,8 @@
       <a href="#">Contact</a>  
     </div>
   </div>
+
+  
 </header>
 
 
@@ -91,6 +93,45 @@
   </div>
   
   <script src="app.js"></script>
+  <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
 
   
 
