@@ -5,14 +5,13 @@ body{
   background-color: #000000;
 }
 
-
 .fa-bars {
   position: fixed; /* Or absolute, depending on your layout needs */
   top: 90%; /* Adjust as needed */
   right: 20px; /* Adjust as needed */
   font-size: 30px; /* Adjust as needed */
-  color: #fff; /* Adjust color as needed */
-  z-index: 1000; /* Ensures it's above other content */
+  color: #4b819b; /* Adjust color as needed */
+  z-index: 7000; /* Ensures it's above other content */
   cursor: pointer;
 }
 
@@ -105,7 +104,7 @@ section{
   height: 500px; /* Example height */
   overflow: auto; /* Adds scrollbars as needed */
   right: 5%;
-  top: 40%;
+  bottom: 10%;
   z-index: 1000;
   animation: slideIn 1s ease-out; /* Apply the animation */
   display: none;
