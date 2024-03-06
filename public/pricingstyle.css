@@ -18,18 +18,18 @@ html, body {
 
 #box1 {
     border: 1px solid;
-    height: 600px;
-    width: 900px;
+    width: 100%;
+    height: auto;
     background-color: #020a2700;
     position: relative;
-    bottom: 540px;
-    left: 500px;
-    z-index: 1000;
+    bottom: 460px;
+    z-index: 2;
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Example: creates a 3-column layout */
     grid-template-rows: auto; /* Rows size will adjust based on content */
     gap: 50px; /* Space between grid items */
+    border-color: #0e529100;
   }
 
   .grid-item {
