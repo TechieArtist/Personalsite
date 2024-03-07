@@ -110,6 +110,7 @@ header .navigation{
   border-style: solid;
   border-width: 4px;
   transition: background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
+  background-color: #0000007e;
 }
 
 /* Hover effect */
@@ -129,27 +130,27 @@ header .navigation{
 }
 
 .fa-bars {
-    position: fixed; /* Or absolute, depending on your layout needs */
-    top: 90%; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    font-size: 30px; /* Adjust as needed */
-    color: #fff; /* Adjust color as needed */
-    z-index: 1000; /* Ensures it's above other content */
-    cursor: pointer;
-  }
-
+  position: fixed; /* Or absolute, depending on your layout needs */
+  top: 90%; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  font-size: 30px; /* Adjust as needed */
+  color: #fff; /* Adjust color as needed */
+  z-index: 7000; /* Ensures it's above other content */
+  cursor: pointer;
+}
 
 .chat-container {
-    position: fixed;
-    width: 300px; /* Example width */
-    height: 500px; /* Example height */
-    overflow: auto; /* Adds scrollbars as needed */
-    right: 5%;
-    top: 40%;
-    z-index: 1000;
-    animation: slideIn 1s ease-out; /* Apply the animation */
-    display: none;
-  }
+  position: fixed;
+  width: 300px; /* Example width */
+  height: 500px; /* Example height */
+  overflow: auto; /* Adds scrollbars as needed */
+  right: 5%;
+  bottom: 10%;
+  z-index: 1000;
+  animation: slideIn 1s ease-out; /* Apply the animation */
+  display: none;
+}
+
 .chat-container h1 {
     color: #ffffff; /* White */
   }
@@ -159,8 +160,7 @@ header .navigation{
     top: 80%;
     position: relative;
     font-size: large;
-    width: 180px; /* Example width */
-    height: 50px; /* Example height */
+
   }
 
 .chat-container button {
@@ -389,3 +389,4 @@ header .navigation{
     line-height: 60px;
   }
 }
+
