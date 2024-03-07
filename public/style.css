@@ -85,6 +85,7 @@ section{
   justify-content: center;
   flex-direction: column;
   background: #000000;
+  overflow: hidden; /* Ensure no overflow from the absolutely positioned GIF */
 }
 
 .home:before{
@@ -178,6 +179,7 @@ section{
   display: block;
   /* Corrected animation application */
   animation: mySlide 4s; /* Shorthand for 'name duration' */
+  font-size: small;
 }
 
 
@@ -312,7 +314,6 @@ section{
   clip-path: circle(150% at 0 50%);
   transition: 2s ease;
   transition-property: clip-path;
-   pointer-events: none; /* Disable pointer events for the videos */
 }
 
 @media (max-width: 1040px){
@@ -394,3 +395,26 @@ section{
   }
 }
 
+/* Style for the mobile GIF */
+.mobile-gif {
+  display: none; /* Hide it by default */
+  position: absolute; /* Position the GIF absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the full width of the .home section */
+  height: 100%; /* Cover the full height of the .home section */
+  background-image: url('buildings.gif'); /* Set the background GIF */
+  background-size: cover; /* Ensure the background covers the div */
+  background-position: center; /* Center the background image */
+  z-index: 1; /* Ensure the GIF is behind all other content */
+}
+
+/* Media query for devices with a maximum width of 768px */
+@media (max-width: 768px) {
+  .video-slide {
+      display: none; /* Hide videos on mobile */
+  }
+  .mobile-gif {
+      display: block; /* Show the GIF background div on mobile */
+  }
+}
