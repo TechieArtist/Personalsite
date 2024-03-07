@@ -1,3 +1,4 @@
+// Existing chat submission functionality
 document.getElementById('submit').addEventListener('click', function() {
     const prompt = document.getElementById('prompt').value;
     fetch('/api/chat', { // This endpoint should match your server-side route
@@ -11,30 +12,24 @@ document.getElementById('submit').addEventListener('click', function() {
         }
         return response.json();
     })
-        .then(data => {
-        // Assuming the server response includes the text directly
+    .then(data => {
         document.getElementById('response').innerText = data.responseMessage;
     })
     .catch(error => console.error('Error:', error));
 });
 
+// Existing toggle chat functionality
 document.getElementById('toggle-chat-btn').addEventListener('click', function() {
     var chatContainer = document.querySelector('.chat-container');
     if (chatContainer.style.display === 'none' || chatContainer.style.display === '') {
-        chatContainer.style.display = 'block'; // Show the chat interface
+        chatContainer.style.display = 'block';
     } else {
-        chatContainer.style.display = 'none'; // Hide the chat interface
+        chatContainer.style.display = 'none';
     }
 });
 
-
-
-
-
-// Get the modal
+// Existing modal functionality
 var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal
 var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
@@ -43,11 +38,14 @@ img.onclick = function(){
     modalImg.src = this.querySelector("img").src;
     captionText.innerHTML = this.querySelector("img").alt;
 }
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
     modal.style.display = "none";
 }
+
+// Add zoom toggle functionality
+modalImg.addEventListener('click', function() {
+    this.classList.toggle('zoomed');
+    // Toggle cursor style depending on whether the image is zoomed in or not
+    this.style.cursor = this.classList.contains('zoomed') ? 'zoom-out' : 'zoom-in';
+});
