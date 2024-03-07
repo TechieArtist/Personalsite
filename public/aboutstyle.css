@@ -119,11 +119,13 @@ body {
 
 .contact-info {
   padding: 50px 100px;
+  position: relative;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.767); /* Set the background color to black */
   color: white; /* Set the text color to white for contrast */
   margin: 50px;
-  
+  line-height: 1
+
 }
 
 .contact-info h1, .contact-info h2 {
@@ -138,6 +140,9 @@ body {
   color: #fff;
   z-index: 40;
   position: relative;
+  background-color: #000000bb;
+  border-radius: 5px;
+  border-width: 5px;
 }
 
 .contact-methods div, .social-media {
@@ -147,7 +152,7 @@ body {
 .media-icons{
     z-index: 888;
     position: relative;
-    right: 30px;
+    right: 20px;
     display: flex;
     flex-direction: column;
     transition: 0.5s ease;
@@ -173,7 +178,7 @@ body {
     right: 20px; /* Adjust as needed */
     font-size: 30px; /* Adjust as needed */
     color: #fff; /* Adjust color as needed */
-    z-index: 1000; /* Ensures it's above other content */
+    z-index: 7000; /* Ensures it's above other content */
     cursor: pointer;
   }
 
@@ -336,4 +341,48 @@ body {
     }
   }
   
+  .emphasis {
+    color: #FF5733; /* Change to the desired color for emphasis */
+    font-weight: bold; /* Optionally, make the emphasized words bold */
+    /* You can add more styles here as needed */
+  }
   
+ /* Hide video on mobile */
+@media (max-width: 767px) {
+  .video-slide {
+    display: none;
+  }
+  .video-container {
+    background-image: url('streets.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Show video only on desktop */
+@media (min-width: 768px) {
+  .desktop-only {
+    display: block;
+  }
+}
+
+
+/* Style for the mobile GIF */
+.mobile-gif {
+  display: none; /* Hide it by default */
+  background-image: url('buildings.gif'); /* Set the background GIF */
+  background-size: cover; /* Cover the entire div */
+  height: 100vh; /* Adjust the height as per your need */
+  width: 100%; /* Adjust the width as per your need */
+}
+
+/* Media query for devices with a maximum width of 768px */
+@media (max-width: 768px) {
+  .video-slide {
+      display: none; /* Hide videos on mobile */
+  }
+  .mobile-gif {
+      display: block; /* Show the GIF background div on mobile */
+  }
+}
