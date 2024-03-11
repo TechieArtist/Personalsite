@@ -406,3 +406,11 @@ section{
   transform: scale(2); /* Adjust the scale as per your need */
   transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
 }
+
+
+.emphasis {
+  color: #33a3ff; /* Change to the desired color for emphasis */
+  font-weight: bold; /* Optionally, make the emphasized words bold */
+  /* You can add more styles here as needed */
+  font-size: large;
+}
