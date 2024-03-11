@@ -367,14 +367,18 @@ body {
   }
 }
 
-
 /* Style for the mobile GIF */
 .mobile-gif {
   display: none; /* Hide it by default */
-  background-image: url('buildings.gif'); /* Set the background GIF */
-  background-size: cover; /* Cover the entire div */
-  height: 100vh; /* Adjust the height as per your need */
-  width: 100%; /* Adjust the width as per your need */
+  position: absolute; /* Position the GIF absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the full width of the .home section */
+  height: 100%; /* Cover the full height of the .home section */
+  background-image: url('cars.gif'); /* Set the background GIF */
+  background-size: cover; /* Ensure the background covers the div */
+  background-position: center; /* Center the background image */
+  z-index: 1; /* Ensure the GIF is behind all other content */
 }
 
 /* Media query for devices with a maximum width of 768px */
